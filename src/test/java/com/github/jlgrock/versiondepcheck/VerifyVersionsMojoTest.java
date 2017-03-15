@@ -32,12 +32,7 @@ public class VerifyVersionsMojoTest {
     }
 
     private File loadFile(final String filename) {
-        URL resource = getClass().getClassLoader().getResource(filename);
-        if (resource != null) {
-            String filePath = resource.getFile();
-            return new File(filePath);
-        }
-        return null;
+        return new File("src/test/resources/" + filename);
     }
 
 }
